@@ -98,10 +98,8 @@ class BinaryNode:
         
         
 def print_tree(tree, steps_of_indentation=0):
-
     spaces = "  " * steps_of_indentation
     print(spaces + str(tree.value))
-    
     for child in tree.children:
         print_tree(child, steps_of_indentation + 1)
 
@@ -113,8 +111,8 @@ def random_tree(max_height=4, max_children_per_node=4):
         number_of_children = random.randrange(0, max_children_per_node + 1)
         for n in range(0, number_of_children):
             child = random_tree(max_height - 1, max_children_per_node)
-            tree.add_child(child)
-                
+            #tree.add_child(child)
+            tree.children.append(child)                
     return tree
     
 def random_binary_tree(value_list):
