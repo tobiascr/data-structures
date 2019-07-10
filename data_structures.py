@@ -111,7 +111,6 @@ def random_tree(max_height=4, max_children_per_node=4):
         number_of_children = random.randrange(0, max_children_per_node + 1)
         for n in range(0, number_of_children):
             child = random_tree(max_height - 1, max_children_per_node)
-            #tree.add_child(child)
             tree.children.append(child)                
     return tree
     
